@@ -185,6 +185,7 @@ button:focus {
     ),
     url(../images/1_hero/hero-bg.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-header {
@@ -228,10 +229,21 @@ button:focus {
   flex-basis: calc((100% - 3 * 24px) / 4);
   flex-direction: column;
   align-items: flex-start;
+  gap: 8px;
+}
+
+.features-item-container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  background-color: var(--secondary-light-color);
+  text-align: center;
+}
+.features-item-icon {
 }
 
 .features-item-header {
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -304,10 +316,10 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
 
 .team-item-header {
-  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -317,7 +329,68 @@ button:focus {
   line-height: 1.5;
 }
 
+.team-item-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.team-item-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-accent-color);
+  border-radius: 50%;
+}
+
+.team-link-icon {
+  fill: var(--secondary-light-color);
+}
+
+.team-social-link:hover,
+.team-social-link:focus,
+.team-social-link:active {
+  background-color: var(--secondary-accent-color);
+}
+
 /* ====== /TEAM ====== */
+/* ====== CUSTOMERS ======= */
+.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.customers-header {
+  margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--secondary-dark-color);
+  letter-spacing: var(--primary-letter-spacing);
+  text-transform: capitalize;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.customers-icon {
+  fill: var(--primary-grey-color);
+}
+/* ====== /CUSTOMERS ======= */
 /* ====== PORTFOLIO PAGE ====== */
 
 .portfolio {
