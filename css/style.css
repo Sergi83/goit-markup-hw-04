@@ -179,6 +179,12 @@ button:focus {
   padding-bottom: 188px;
   text-align: center;
   background-color: var(--secondary-dark-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/1_hero/hero-bg.jpg);
+  background-repeat: no-repeat;
 }
 
 .hero-header {
