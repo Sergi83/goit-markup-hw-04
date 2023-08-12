@@ -76,7 +76,8 @@ button:focus {
 .link {
   text-decoration: none;
   transition: color var(--transition-timing),
-    background-color var(--transition-timing);
+    background-color var(--transition-timing),
+    text-decoration-color var(--transition-timing);
 }
 
 .link:hover,
