@@ -15,6 +15,7 @@
   --secondary-font: 'Raleway', sans-serif;
   --button-letter-spacing: 0.04em;
   --primary-letter-spacing: 0.02em;
+  --transition-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ====== /VARIABLES ====== */
 
@@ -74,6 +75,8 @@ button:focus {
 
 .link {
   text-decoration: none;
+  transition: color var(--transition-timing),
+    background-color var(--transition-timing);
 }
 
 .link:hover,
@@ -368,6 +371,8 @@ button:focus {
   height: 100%;
   background-color: var(--primary-accent-color);
   border-radius: 50%;
+  transition: background-color var(--transition-timing),
+    fill var(--transition-timing);
 }
 
 .team-link-icon {
@@ -416,10 +421,13 @@ button:focus {
   padding: 16px 32px;
   border: 1px solid var(--primary-grey-color);
   border-radius: 4px;
+  transition: background-color var(--transition-timing),
+    fill var(--transition-timing);
 }
 
 .customers-icon {
   fill: var(--primary-grey-color);
+  transition: fill var(--transition-timing);
 }
 
 .customers-item-link:hover,
@@ -428,9 +436,9 @@ button:focus {
   border-color: var(--secondary-accent-color);
 }
 
-.customers-icon:hover,
-.customers-icon:focus,
-.customers-icon:active {
+.customers-item-link:hover .customers-icon,
+.customers-item-link:focus .customers-icon,
+.customers-item-link:active .customers-icon {
   fill: var(--secondary-accent-color);
 }
 
@@ -455,6 +463,9 @@ button:focus {
   border: 1px solid var(--accent-light-color);
   color: var(--primary-accent-color);
   background-color: var(--secondary-light-color);
+  transition: color var(--transition-timing),
+    background-color var(--transition-timing),
+    border-color var(--transition-timing);
 }
 
 .portfolio-filter-btn:hover,
@@ -483,6 +494,24 @@ button:focus {
 .portfolio-card {
 }
 
+.portfolio-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  background-color: var(--primary-accent-color);
+  color: var(--secondary-light-color);
+  transition: transform var(--transition-timing);
+  transform: translateY(100%);
+}
+
 .portfolio-card-block {
   display: flex;
   padding: 32px 16px;
@@ -506,6 +535,11 @@ button:focus {
 .portfolio-card-text {
   color: var(--primary-dark-color);
 }
+
+.portfolio-card:hover .portfolio-img-overlay {
+  transform: translateY(0%);
+}
+
 /* ====== /PORTFOLIO PAGE ====== */
 /* ====== FOOTER ====== */
 
