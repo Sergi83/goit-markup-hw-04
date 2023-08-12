@@ -151,11 +151,26 @@ button:focus {
   gap: 40px;
 }
 
+.menu-item {
+  position: relative;
+}
+
 .menu-link {
-  display: inline-block;
+  display: block;
   padding: 24px 0;
   font-weight: 500;
   color: var(--secondary-dark-color);
+}
+
+.current::after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--secondary-accent-color);
+  border-radius: 2px;
+  content: '';
 }
 
 .header-page-address {
@@ -341,14 +356,16 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
 }
 
 .team-social-link {
-  width: 40px;
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   background-color: var(--primary-accent-color);
   border-radius: 50%;
 }
@@ -498,7 +515,12 @@ button:focus {
   color: var(--secondary-light-color);
 }
 
-.footer > .container > .logo {
+.footer-container {
+  display: flex;
+  column-gap: 120px;
+}
+
+.footer-logo-block > .logo {
   display: inline-block;
   margin-bottom: 16px;
 }
@@ -510,6 +532,51 @@ button:focus {
 .footer-text {
   width: 264px;
   letter-spacing: var(--primary-letter-spacing);
+}
+
+.footer-social-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-social-header {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-light-color);
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-accent-color);
+  border-radius: 50%;
+}
+
+.footer-link-icon {
+  fill: var(--secondary-light-color);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus,
+.footer-social-link:active {
+  background-color: var(--success-message-color);
 }
 
 /* ====== /FOOTER ====== */
